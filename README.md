@@ -11,10 +11,10 @@ O objetivo principal deste repositório é:
 
 ## Conteúdo
 
-### 1. Anotações e Documentação
+### 1. Anotações, Implementação e Documentação
 
-- **Anotações em Markdown (MD):** Incluem anotações extensas do livro *Entendendo Algoritmos* e outros materiais de estudo. As anotações estão sendo atualizadas conforme o avanço na leitura e compreensão dos temas.
-- **Documentação de Algoritmos:** Explicações detalhadas dos algoritmos que estão sendo explorados no repositório. Alguns deles são:
+- **Anotações em Markdown (MD):** Incluem anotações extensas do livro *Entendendo Algoritmos* e outros materiais de estudo. As anotações estão sendo atualizadas conforme o avanço na leitura e compreensão dos temas. É importante ressaltar que muito do conteúdo do que está nessas anotações pode ter sido tirado diretamente do livro, bem como também existem muitas adições minhas.
+- **Implementação e Documentação de Algoritmos:** Explicações detalhadas dos algoritmos que estão sendo explorados no repositório. Alguns deles são:
   - **Selection Sort**
   - **Quick Sort**
   - **Busca Binária**
@@ -31,14 +31,7 @@ O objetivo principal deste repositório é:
   - [Exercícios de Revisão 2](https://github.com/gabrafo/Revisao1): Mais exercícios de revisão para a mesma disciplina.
   - [Projeto Prático com Shell Sort](https://github.com/gabrafo/ProjetoPraticoIAlg): Projeto prático da disciplina de Introdução aos Algoritmos, onde foi utilizado o Shell Sort para ordenação eficiente.
 
-### 3. Principais Fontes de Estudo
-
-Este repositório se baseia em diversas fontes para estudo e revisão de algoritmos e estruturas de dados, sendo algumas delas:
-
-- Livro *Entendendo Algoritmos* por Aditya Bhargava.
-- Curso CS50 da Harvard University.
-
-### 4. Contribuições
+### 3. Contribuições
 
 Contribuições são bem-vindas! Se você deseja contribuir com o repositório, pode:
 - **Adicionar novas implementações:** Compartilhe suas próprias implementações de algoritmos em diferentes linguagens.
