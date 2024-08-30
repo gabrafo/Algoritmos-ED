@@ -7,4 +7,4 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-CMD ["python", "./pilha.py"]
+CMD ["python", "./pilha_recursao.py"]
