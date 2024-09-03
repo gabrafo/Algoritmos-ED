@@ -1,5 +1,5 @@
 # Documentando o código...
-No arquivo [`selectionsort.cpp`](,,/selectionsort.cpp) temos um exemplo de método de ordenação (ordenação por seleção), a seguir irei explicar o funcionamento desse algoritmo. Esse algoritmo não utiliza a técnica "dividir para conquistar", e sim uma abordagem iterativa.
+No arquivo [`selectionsort.cpp`](../selectionsort.cpp) temos um exemplo de método de ordenação (ordenação por seleção), a seguir irei explicar o funcionamento desse algoritmo. Esse algoritmo não utiliza a técnica "dividir para conquistar", e sim uma abordagem iterativa.
 
 ```cpp
 void selectionSort(Artista artistasVetor[], int tamanhoVetor){
