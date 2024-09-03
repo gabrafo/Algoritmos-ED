@@ -1,5 +1,5 @@
 # Documentando o código...
-No arquivo [`dc_recursao.java`](dc_recursao.javap) temos um exemplo da técnica de resolução de problemas dividir para conquistar, a seguir irei explicar o problema que iremos resolver, os passos tomados para que pudéssemos abordá-lo e detalharei sua resolução final. No entanto, antes disso, precisamos aprender o que é essa técnica e qual a sua usabilidade.
+No arquivo [`dc_recursao.java`](../dc_recursao.javap) temos um exemplo da técnica de resolução de problemas dividir para conquistar, a seguir irei explicar o problema que iremos resolver, os passos tomados para que pudéssemos abordá-lo e detalharei sua resolução final. No entanto, antes disso, precisamos aprender o que é essa técnica e qual a sua usabilidade.
 
 **Nota:** O conteúdo desse texto se baseia diretamente em um exemplo dado no livro "Entendendo Algoritmos", é uma leitura extremamente recomendada.
 
