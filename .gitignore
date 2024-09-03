@@ -48,3 +48,7 @@
 # Ignore all local history of files
 .history
 .ionide
+.idea/Algoritmos&ED.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
