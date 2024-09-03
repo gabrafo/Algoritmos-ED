@@ -38,6 +38,9 @@
 ### VisualStudioCode ###
 .vscode/*
 
+### IntelliJ ###
+.idea/*
+
 # Local History for Visual Studio Code
 .history/
 
