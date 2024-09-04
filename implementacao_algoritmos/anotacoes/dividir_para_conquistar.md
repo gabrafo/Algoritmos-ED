@@ -166,11 +166,11 @@ Um breve esclarecimento, caso você não seja familiar com o conceito ou não te
 Assim como no exemplo em Java, o uso de recursão em C++ resulta em um empilhamento de chamadas de função. A seguir, vamos explorar esse conceito para entender como ele funciona neste exemplo. 
 
 ##### E no exemplo original (da contagem de elementos)?
-No exemplo original, temos chamadas subsequentes da função `contaLista()` de uma lista com número de elementos cada vez menor, até não restar nenhum. Nesse processo, há um constante empilhamento de novas chamadas na pilha, até que cheguemos ao cenário do caso-base.
-
-No exemplo original, temos chamadas subsequentes da função `contaLista()` de uma lista com número de elementos cada vez menor, até não restar nenhum. Nesse processo, há um constante empilhamento de novas chamadas na pilha, até que cheguemos ao cenário do caso-base.
+Vejamos o estado da nossa lista antes do início da função recursiva:
 ![Estrutura 'lista' antes do início da função](imagens/image-6.png)
+É esperado que tenhamos um retorno com valor 10, visto que temos 10 elementos ao todo dispostos na lista.
 
+No exemplo original, temos chamadas subsequentes da função `contaLista()` de uma lista com número de elementos cada vez menor, até não restar nenhum. Nesse processo, há um constante empilhamento de novas chamadas na pilha, até que cheguemos ao cenário do caso-base.
 ![Primeira chamada recursiva](imagens/image-7.png)
 
 Após construirmos a pilha de chamadas, precisamos desempilhá-la até retornarmos à função que originou as tantas chamadas recursivas que estamos lidando.
