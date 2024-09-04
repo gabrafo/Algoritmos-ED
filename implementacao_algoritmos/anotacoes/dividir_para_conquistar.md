@@ -171,6 +171,7 @@ Vejamos o estado da nossa lista antes do início da função recursiva:
 É esperado que tenhamos um retorno com valor 10, visto que temos 10 elementos ao todo dispostos na lista.
 
 No exemplo original, temos chamadas subsequentes da função `contaLista()` de uma lista com número de elementos cada vez menor, até não restar nenhum. Nesse processo, há um constante empilhamento de novas chamadas na pilha, até que cheguemos ao cenário do caso-base.
+
 ![Primeira chamada recursiva](imagens/image-7.png)
 
 Após construirmos a pilha de chamadas, precisamos desempilhá-la até retornarmos à função que originou as tantas chamadas recursivas que estamos lidando.
