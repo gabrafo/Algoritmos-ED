@@ -103,9 +103,11 @@ Imagine que você está construindo uma torre de blocos onde cada bloco é coloc
 
 ##### E no exemplo original (da soma)?
 No exemplo original, temos chamadas subsequentes da função `soma()` de uma lista com número de elementos cada vez menor, até não restar nenhum. Nesse processo, há um constante empilhamento de novas chamadas na pilha, até que cheguemos ao cenário do caso-base.
+
 ![Pilha de chamadas: empilhamento](imagens/image-3.png)
 
 Após construirmos a pilha de chamadas, precisamos desempilhá-la até retornarmos à função que originou as tantas chamadas recursivas que estamos lidando.
+
 ![Pilha de chamadas: desempilhamento](imagens/image-4.png)
 
 ---
@@ -167,7 +169,9 @@ Assim como no exemplo em Java, o uso de recursão em C++ resulta em um empilhame
 
 ##### E no exemplo original (da contagem de elementos)?
 Vejamos o estado da nossa lista antes do início da função recursiva:
+
 ![Estrutura 'lista' antes do início da função](imagens/image-6.png)
+
 É esperado que tenhamos um retorno com valor 10, visto que temos 10 elementos ao todo dispostos na lista.
 
 No exemplo original, temos chamadas subsequentes da função `contaLista()` de uma lista com número de elementos cada vez menor, até não restar nenhum. Nesse processo, há um constante empilhamento de novas chamadas na pilha, até que cheguemos ao cenário do caso-base.
@@ -175,6 +179,7 @@ No exemplo original, temos chamadas subsequentes da função `contaLista()` de u
 ![Primeira chamada recursiva](imagens/image-7.png)
 
 Após construirmos a pilha de chamadas, precisamos desempilhá-la até retornarmos à função que originou as tantas chamadas recursivas que estamos lidando.
+
 ![Chamadas subsequentes até chegarmos ao caso-base](imagens/image-8.png)
 
 Ao chegarmos ao caso-base, fazemos o caminho reverso, realizando *pops* (retirada de chamadas da pilha) até retornarmos à chamada original da função, com a soma de todos os valores acrescidos.
