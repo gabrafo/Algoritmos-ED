@@ -1,7 +1,7 @@
 // Exerício 4.2 do livro Entendendo Algoritmos: Encontre o valor mais alto em uma lista.
 
 // Passo 1: caso-base é uma lista com um elemento, pois sabemos facilmente que ele é o maior.
-// Passo 2: reduzir nossa lista até ela ter apenas um elemento, somando a quantidade de elementos atuais com a chamada recursiva até atingirmos o caso-base.
+// Passo 2: reduzir nossa lista até ela ter apenas um elemento, retirando os elementos menores.
 
 #include <iostream>
 #include <list>
