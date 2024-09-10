@@ -4,122 +4,87 @@
 #include <iostream>
 #include <vector> // Facilitar a manipulação de elementos, com vetores estáticos eu tinha que realocar constantemente a memória
 #include <chrono>  // Para medir o tempo
+#include <algorithm> // Para usar std::sort e std::shuffle
+#include <random>    // Para shuffle
 using namespace std;
 using namespace std::chrono;
 
-// Complexidade: O(n log n), MELHOR CASO.
-void qsort_melhor(vector<int>& vetor){
+// Usa o elemento mediano como pivô.
+void quicksort(vector<int>& vetor, int inicio, int fim) {
+    if (inicio >= fim) return; // Caso-base: percorreu todos os elementos do vetor.
 
-    if (vetor.size() < 2) {
-        return;
-    }
+    // Caso recursivo: ainda há elementos a serem ordenados.
+    int pivo = vetor[(inicio + fim) / 2];
+    int i = inicio, j = fim;
 
-    int baixo = 0;
-    int alto = vetor.size()-1;
-    int meio = (baixo+alto)/2;
-
-    // Pivô é o elemento central
-    int pivo = vetor[meio];
-
-    vector<int> menoresQuePivo;
-    vector<int> maioresQuePivo;
-
-    for (size_t i = 0; i < vetor.size(); i++) { // Usando size_t para não dar aviso
-        if (vetor[i] < pivo) {
-            menoresQuePivo.push_back(vetor[i]);
-        } else if (vetor[i] > pivo) {
-            maioresQuePivo.push_back(vetor[i]);
+    while (i <= j) {
+        while (vetor[i] < pivo) i++;
+        while (vetor[j] > pivo) j--;
+        if (i <= j) {
+            swap(vetor[i], vetor[j]);
+            i++;
+            j--;
         }
     }
 
-    qsort_melhor(menoresQuePivo);
-    qsort_melhor(maioresQuePivo);
-
-    size_t indiceVetorOriginal = 0;
-
-    for (size_t i = 0; i < menoresQuePivo.size(); i++) {
-        vetor[indiceVetorOriginal++] = menoresQuePivo[i];
-    }
-
-    vetor[indiceVetorOriginal++] = pivo;
-
-    for (size_t i = 0; i < maioresQuePivo.size(); i++) {
-        vetor[indiceVetorOriginal++] = maioresQuePivo[i];
-    }
+    quicksort(vetor, inicio, j);
+    quicksort(vetor, i, fim);
 }
 
-// Complexidade: O(n²), PIOR CASO.
-void qsort_pior(vector<int>& vetor) {
-    // Caso-base: array com menos de dois elementos.
-    if (vetor.size() < 2) {
-        return;
-    }
+// Usa o primeiro elemento como pivô.
+void quicksort_pior(vector<int>& vetor, int inicio, int fim) {
+    if (inicio >= fim) return;
 
-    // Escolhendo o pivô como o primeiro elemento.
-    int pivo = vetor[0];
+    int pivo = vetor[(inicio)];
+    int i = inicio, j = fim;
 
-    vector<int> menoresQuePivo;
-    vector<int> maioresQuePivo;
-
-    for (size_t i = 1; i < vetor.size(); i++) { // Usando size_t para não dar aviso
-        if (vetor[i] < pivo) {
-            menoresQuePivo.push_back(vetor[i]);  // Adiciona ao vetor de menores.
-        } else {
-            maioresQuePivo.push_back(vetor[i]);  // Adiciona ao vetor de maiores.
+    // Particionamento in-place
+    while (i <= j) {
+        while (vetor[i] < pivo) i++;
+        while (vetor[j] > pivo) j--;
+        if (i <= j) {
+            swap(vetor[i], vetor[j]);
+            i++;
+            j--;
         }
     }
 
-    qsort_pior(menoresQuePivo);
-    qsort_pior(maioresQuePivo);
-
-    // Reunindo as partes no vetor original.
-    size_t indiceVetorOriginal = 0;
-    
-    for (size_t i = 0; i < menoresQuePivo.size(); i++) {
-        vetor[indiceVetorOriginal++] = menoresQuePivo[i];
-    }
-
-    // Evita duplicar o pivô se houver elementos iguais
-    if (vetor.size() > 0 && vetor[0] != pivo) {
-        vetor[indiceVetorOriginal++] = pivo;
-    }
-
-    for (size_t i = 0; i < maioresQuePivo.size(); i++) {
-        vetor[indiceVetorOriginal++] = maioresQuePivo[i];
-    }
+    // Recursão nas subpartes
+    quicksort_pior(vetor, inicio, j);
+    quicksort_pior(vetor, i, fim);
 }
 
 int main(){
 
-    const size_t TAMANHO_VETOR = 1000000; // Você pode ajustar o tamanho aqui
+    const size_t TAMANHO_VETOR = 100000; // Tamanho ajustável
 
-    // Gerando um vetor com números aleatórios
+    // Vetor aleatório
     vector<int> vetor(TAMANHO_VETOR);
-    srand(static_cast<unsigned>(time(0))); // Inicializa o gerador de números aleatórios
+    srand(static_cast<unsigned>(time(0)));
 
-    cout << "PIOR CASO" << endl;
     for (size_t i = 0; i < TAMANHO_VETOR; i++) {
-        vetor[i] = rand() % 100000; // Preenche com números aleatórios entre 0 e 99999
+        vetor[i] = rand() % 100000;
     }
 
+    // Simulando o pior caso (vetor ordenado): O(n²)
+    cout << "PIOR CASO" << endl;
+    vector<int> vetorPiorCaso = vetor;
+    sort(vetorPiorCaso.begin(), vetorPiorCaso.end()); // Ordena para simular o pior caso
     auto inicio = high_resolution_clock::now();
-    qsort_pior(vetor);
+    quicksort_pior(vetorPiorCaso, 0, vetorPiorCaso.size() - 1);
     auto fim = high_resolution_clock::now();
     auto duracao = duration_cast<milliseconds>(fim - inicio);
-
-    // Exibindo o tempo de execução
     cout << "Tempo de execução pior caso: " << duracao.count() << " ms" << endl << endl;
 
+    // Simulando o melhor caso (vetor aleatório): O(n log n)
     cout << "MELHOR CASO" << endl;
-    vector<int> vetor2(TAMANHO_VETOR);
-    for (size_t i = 0; i < TAMANHO_VETOR; i++) {   
-        vetor2[i] = rand() % 100000; // Preenche com números aleatórios entre 0 e 99999
-    }
+    vector<int> vetorMelhorCaso = vetor;
+    auto rng = default_random_engine{};
+    shuffle(vetorMelhorCaso.begin(), vetorMelhorCaso.end(), rng); // Aleatoriza para simular o melhor caso
     inicio = high_resolution_clock::now();
-    qsort_melhor(vetor2);
+    quicksort(vetorMelhorCaso, 0, vetorMelhorCaso.size() - 1);
     fim = high_resolution_clock::now();
     duracao = duration_cast<milliseconds>(fim - inicio);
-
     cout << "Tempo de execução melhor caso: " << duracao.count() << " ms" << endl;
 
     return 0;
