@@ -17,6 +17,7 @@ void quicksort(vector<int>& vetor, int inicio, int fim) {
     int pivo = vetor[(inicio + fim) / 2];
     int i = inicio, j = fim;
 
+    // Particionamento in-place
     while (i <= j) {
         while (vetor[i] < pivo) i++;
         while (vetor[j] > pivo) j--;
