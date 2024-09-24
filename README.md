@@ -7,7 +7,7 @@ Bem-vindo ao repositório dedicado ao estudo e revisão de algoritmos e estrutur
 O objetivo principal deste repositório é:
 - Revisitar e aprimorar o meu conhecimento em algoritmos e estruturas de dados.
 - Documentar o meu progresso e descobertas durante o estudo.
-- Compartilhar anotações, implementações e recursos que possam ser úteis para outros que estão aprendendo ou desejam revisar esses conceitos.
+- Compartilhar anotações, implementações e recursos que possam ser úteis para outros que estão aprendendo ou desejam revisar esses conceitos. Nem tudo que está nos arquivos .PDF são de minha autoria, visto que são textos baseados em outros materiais didáticos (estando, em sua grande maioria, especificados na seção de recursos e links adicionais).
 
 ## Conteúdo
 
