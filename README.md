@@ -19,12 +19,20 @@ O objetivo principal deste repositório é:
   - **Quick Sort**
   - **Busca Binária**
   - **Busca Sequencial**
+- **Implementação e Documentação de Estruturas de Dados:** Explicações detalhadas das estruturas de dados exploradas no repositório, sendo, algumas delas:
+  - **Vetores**
+  - **Listas encadeadas**
+  - **Grafos**
+  - **Árvores AVL**
+  - **Tabelas Hash**
 
 ### 2. Recursos e Links Adicionais
 
 - **[BibliotecaDev](https://github.com/KAYOKG/BibliotecaDev):** Repositório com o livro *Entendendo Algoritmos* e diversos outros livros abordando programação.
 
 - **[Curso CS50 da Harvard University](https://www.youtube.com/watch?v=3LPJfIKxwWc&list=PLhQjrBD2T381WAHyx1pq-sBfykqMBI7V4):** Curso gratuito de introdução à ciência da computação.
+
+- **[Estruturas de Dados (com C++)](https://www.youtube.com/playlist?list=PLY-_XMpiC9C3Yn-T5Rg0f0te7X8aVUOO0):** Playlist disponibilizada pela Universidade Federal de Lavras (UFLA) destinada à disciplina de Estruturas de Dados, com aulas ministradas pelo professor Joaquim Quintero Uchôa.
 
 - **Exercícios e Projetos de Revisão:**
   - [Exercícios de Revisão 1](https://github.com/gabrafo/Revisao): Exercícios de revisão para as provas da disciplina de Introdução aos Algoritmos.
