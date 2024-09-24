@@ -9,7 +9,7 @@ O objetivo principal deste repositório é:
 - Documentar o meu progresso e descobertas durante o estudo.
 - Compartilhar anotações, implementações e recursos que possam ser úteis para outros que estão aprendendo ou desejam revisar esses conceitos.
 
-**OBS**: Nem tudo que está nos arquivos .PDF são de minha autoria, visto que são textos baseados em outros materiais didáticos (estando, em sua grande maioria, especificados na seção de recursos e links adicionais).
+**OBS**: Nem tudo que está nos arquivos .PDF é de minha autoria, visto que são textos baseados em outros materiais didáticos (estando, em sua grande maioria, especificados na seção de recursos e links adicionais) com adições postas por mim durante o meu processo de absorção do conteúdo estudado.
 
 ## Conteúdo
 
