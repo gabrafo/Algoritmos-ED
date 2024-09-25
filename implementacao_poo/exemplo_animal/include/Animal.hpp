@@ -16,7 +16,7 @@ class Animal
         void setNome(std::string novoNome);
 
         // Sobrecarga do operador de igualdade (semelhante ao .equals em Java)
-        bool operator==(const Animal& outro) const; // O último const garante que o método não mudara o estado de nenhum objeto
+        bool operator==(const Animal& outro) const; // O último const garante que o método não mudará o estado de nenhum objeto
 };
 
 #endif // 3. Fim da guarda de inclusão
