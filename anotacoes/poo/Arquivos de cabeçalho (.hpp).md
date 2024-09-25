@@ -1,5 +1,6 @@
 # Arquivos de cabeçalho
 **OBS**: Essa anotação não se trata, necessariamente, de algo ligado a POO, mas sim de algo ligado à LP C++ como um todo. A deixei aqui, pois ela irá orientar muitos dos exemplos que veremos na implementação dos pilares de POO.
+
 Os nomes dos elementos do programa, como variáveis, funções, classes etc., devem ser declarados para serem usados. Por exemplo, você não pode simplesmente escrever `x = 42` sem primeiro declarar 'x'.
 
 A declaração informa ao compilador se o elemento é um **`int`**, um **`double`**, uma **função**, uma **`class`** ou alguma outra coisa. Além disso, cada nome deve ser declarado (direta ou indiretamente) em cada arquivo .cpp no qual ele é usado.
@@ -9,7 +10,9 @@ A declaração informa ao compilador se o elemento é um **`int`**, um **`doub
 Para minimizar o potencial de erros, o C++ adotou a convenção de usar _arquivos de cabeçalho_ para conter declarações. Você faz as declarações em um arquivo de cabeçalho e depois usa a diretiva `#include` em cada arquivo .cpp ou outro arquivo de cabeçalho que requer essa declaração. **A diretiva `#include` insere uma cópia do arquivo de cabeçalho diretamente no arquivo .cpp antes da compilação.**
 
 ## O que colocar em um arquivo de cabeçalho?
-Como um arquivo de cabeçalho pode ser incluído por vários arquivos, ele não pode conter definições que possam produzir várias definições de mesmo nome. ==Os seguintes não são permitidos ou são considerados uma prática muito ruim:==
+Como um arquivo de cabeçalho pode ser incluído por vários arquivos, ele não pode conter definições que possam produzir várias definições de mesmo nome.
+
+Os seguintes não são permitidos ou são considerados uma prática muito ruim:
 - definições de tipo internas no namespace ou no escopo global
 - definições de função não embutidas
 - definições de variáveis não `const`
@@ -26,7 +29,7 @@ As guardas de inclusão utilizam diretivas do pré-processador para garantir que
 #ifndef ANIMAL_HPP    // 1. Verifica se ANIMAL_HPP não foi definido
 #define ANIMAL_HPP    // 2. Define ANIMAL_HPP
 
-#include <string
+#include <string>
 using namespace std;
 
 class Animal {

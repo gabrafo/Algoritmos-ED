@@ -181,9 +181,9 @@ Vetor& Vetor::operator=(const Vetor& outro) {
 
 Em C++, a sobrecarga de operadores pode ser implementada de duas maneiras principais: como métodos de classe (funções internas/*inline*) ou como funções externas (geralmente declaradas como "amigas" da classe). A escolha entre essas abordagens depende do contexto e das necessidades específicas do desenvolvedor.
 ```cpp
-// Sobrecarga como função externa
+// Sobrecarga como função interna
 operator+(Vetor&  vetorA, Vetor& vetorB)
 
-// Sobrecarga como função interna
+// Sobrecarga como função externa
 Vetor::operator+(Vetor& vetorB)
 ```
