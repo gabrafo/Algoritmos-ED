@@ -9,11 +9,13 @@ O objetivo principal deste repositório é:
 - Documentar o meu progresso e descobertas durante o estudo.
 - Compartilhar anotações, implementações e recursos que possam ser úteis para outros que estão aprendendo ou desejam revisar esses conceitos.
 
+**OBS**: Nem tudo que está nos arquivos .PDF é de minha autoria, visto que são textos baseados em outros materiais didáticos (estando, em sua grande maioria, especificados na seção de recursos e links adicionais) com adições postas por mim durante o meu processo de absorção do conteúdo estudado.
+
 ## Conteúdo
 
 ### 1. Anotações, Implementação e Documentação
 
-- **Anotações em Markdown (MD):** Incluem anotações extensas do livro *Entendendo Algoritmos* e outros materiais de estudo. As anotações estão sendo atualizadas conforme o avanço na leitura e compreensão dos temas. É importante ressaltar que muito do conteúdo do que está nessas anotações pode ter sido tirado diretamente do livro, bem como também existem muitas adições minhas.
+- **Anotações em Markdown (MD) e em PDF:** Incluem anotações extensas do livro *Entendendo Algoritmos* e outros materiais de estudo. As anotações estão sendo atualizadas conforme o avanço na leitura e compreensão dos temas.
 - **Implementação e Documentação de Algoritmos:** Explicações detalhadas dos algoritmos que estão sendo explorados no repositório. Alguns deles são:
   - **Selection Sort**
   - **Quick Sort**
