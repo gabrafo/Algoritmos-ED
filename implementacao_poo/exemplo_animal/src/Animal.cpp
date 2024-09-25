@@ -10,7 +10,11 @@ void Animal::rugir(){
 string Animal::getNome(){
     return nome;
 }
-
+    
 void Animal::setNome(string novoNome){
     nome = novoNome;
+}
+
+bool Animal::operator==(const Animal& outro) const{
+    return outro.nome == nome;
 }
