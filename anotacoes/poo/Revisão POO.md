@@ -11,11 +11,14 @@ Representação de uma entidade do mundo real, com seu comportamento e caracter�
 
 - Atributos
   Ditam as características de objetos reunidos em uma classe. Para a classe `Estudante`, por exemplo, podemos lidar com os atributos `idade`, `altura`, `nome`, `matricula`, etc. Para além de tipos simples como *int*, *string* e *float*, podemos criar atributos que utilizam-se de objetos de outras classes (exemplo: classe `Disciplina` com um atributo chamado `alunos` do tipo `Estudante`).
+  
   ![Imagem 1](anexo/Imagem%201.png)
 
 - Métodos
   Ditam os comportamentos de objetos reunidos em uma classe. Para a classe `Professor`, por exemplo, podemos lidar com os atributos `passarAvaliacao()`, `corrigirExercicios()`, `ministrarAula()`, etc.
+  
   ![Imagem 2](anexo/Imagem%202.png)
+  
   No exemplo acima, `inicializarDados()` pode ser considerado como um exemplo de construtor (apesar de não seguir a sintaxe exata de um).
 
 ## Encapsulamento
