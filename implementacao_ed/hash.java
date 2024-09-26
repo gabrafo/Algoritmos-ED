@@ -1,4 +1,4 @@
-package implementacao_algoritmos;
+package implementacao_ed;
 
 import java.util.HashMap;
 import java.util.Map;
