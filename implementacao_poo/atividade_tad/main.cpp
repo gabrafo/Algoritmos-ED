@@ -41,14 +41,14 @@ int main(){
     animal_amado_meu2 = Animal("Suzie", "Cachorra", "Carinho, amor e muita atenção", "Minha casa", "10/03/2024");
     animal_amado_comunitario = Animal("Jeffinho", "Cachorro", "Carinho, amor e muito espaço no Mamute", "UFLA", "Desconhecido");
 
-    Doacao doacao1, doacao2, doacao3, doacao4, doacao5;;
+    Doacao doacao1, doacao2, doacao3, doacao4, doacao5, doacao6, doacao7;
     doacao1 = Doacao("Ração de gato adulto e castrado", "Alimentar os animais", 5, 137.55, "Gabriel");
     doacao2 = Doacao("Ração de cachorro filhote de raça pequena", "Alimentar os animais", 5, 130.99, "Flávia");
     doacao3 = Doacao("Medicamentos para gatos", "Tratamento de doenças", 10, 250.00, "Tailane");
     doacao4 = Doacao("Ração para cães adultos", "Alimentar os animais", 7, 180.50, "Tailane");
     doacao5 = Doacao("Camas para animais", "Conforto e abrigo", 3, 120.00, "CATI - Centro Acadêmico de Tecnologia da Informação");
-    Doacao doacao6("Ração para gatos filhotes", "Alimentar os animais", 10, 150.00, "Gabriel");
-    Doacao doacao7("Materiais de limpeza", "Higienização das instalações", 20, 300.00, "CATI - Centro Acadêmico de Tecnologia da Informação");
+    doacao6 = Doacao("Ração para gatos filhotes", "Alimentar os animais", 10, 150.00, "Gabriel");
+    doacao7 = Doacao("Materiais de limpeza", "Higienização das instalações", 20, 300.00, "CATI - Centro Acadêmico de Tecnologia da Informação");
 
 
     Benfeitor benfeitor1, benfeitor2, benfeitor3, benfeitor4;
