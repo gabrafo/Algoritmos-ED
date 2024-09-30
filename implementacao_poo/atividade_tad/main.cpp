@@ -25,7 +25,7 @@ using namespace std;
  * 
  * 4. ONG: Representa a organização como um todo.
  *    Atributos: vetores dinâmicos de animais, doações e benfeitores.
- *    Métodos: redimensionamento dos vetores citados acima, busca por doações de determinado benfeitor a partir de seu nome.
+ *    Métodos: cadastro de objetos nos vetores citados acima, busca por doações de determinado benfeitor a partir de seu nome.
  * 
  * O objetivo do sistema é facilitar o gerenciamento das doações e dos animais, permitindo à ONG 
  * identificar quais benfeitores contribuíram com mais recursos e quais itens são mais necessários para os animais.
