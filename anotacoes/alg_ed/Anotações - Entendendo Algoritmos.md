@@ -647,7 +647,7 @@ Agora, adicionaremos à lista de consulta amigos de seus amigos até encontrarmo
 
 ![Imagem 90.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%2090.png)
 
-![[Imagem 91.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%2091.png)
+![Imagem 91.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%2091.png)
 
 Isso é um exemplo do algoritmo de pesquisa em largura em ação.
 
