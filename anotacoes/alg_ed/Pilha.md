@@ -80,5 +80,5 @@ class Pilha{
 - Remoção (*pop*) de um elemento
   Para a remoção, basta retirarmos o último elemento da pilha. Assim, caso hajam cinco elementos na pilha, como no exemplo acima, devemos apenas retirar o elemento que está no topo (representado pelo atributo `ultimoElemento` da classe `Pilha`), que, no nosso caso, seria "pera" e reatribuir com o elemento anterior ("abacaxi").
   
-  ![Imagem 99.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%20%2099.png)
+  ![Imagem 99.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%2099.png)
   
