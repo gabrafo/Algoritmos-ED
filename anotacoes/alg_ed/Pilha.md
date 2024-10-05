@@ -27,6 +27,7 @@ Geralmente, para implementar uma pilha, usam-se tais estratégias:
   Para essa solução, geralmente, usa-se a estrutura de dados **lista encadeada** ou classes que atuem de forma semelhante.
   
 - Implementação usando arranjo (vetores) para armazenamento dos elementos.
+  As vantagens dessa abordagem são: velocidade de acesso (O(1)) e empilhamento/desempilhamento da pilha. No entanto, pode ser necessário redimensionamento frequente de vetores, o que tem um custo computacional grande, além da possibilidade de desperdiçar espaço de memória.
 
 Pilha e nós são implementados tradicionalmente como estruturas ou classes. Utilizando C++, usaremos a segunda abordagem.
 
