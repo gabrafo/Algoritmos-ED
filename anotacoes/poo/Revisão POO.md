@@ -14,12 +14,14 @@ Representação de uma entidade do mundo real, com seu comportamento e caracter�
   
   ![Imagem 1](anexo/Imagem%201.png)
 
+  Esse exemplo foi retirado de uma videoaula do [curso ministrado pelo professor Joaquim](https://www.youtube.com/playlist?list=PLY-_XMpiC9C3Yn-T5Rg0f0te7X8aVUOO0).
+
 - Métodos
   Ditam os comportamentos de objetos reunidos em uma classe. Para a classe `Professor`, por exemplo, podemos lidar com os atributos `passarAvaliacao()`, `corrigirExercicios()`, `ministrarAula()`, etc.
   
   ![Imagem 2](anexo/Imagem%202.png)
   
-  No exemplo acima, `inicializarDados()` pode ser considerado como um exemplo de construtor (apesar de não seguir a sintaxe exata de um).
+  No exemplo acima, `inicializarDados()` pode ser considerado como um exemplo de construtor (apesar de não seguir a sintaxe exata de um). Esse exemplo foi retirado de uma videoaula do [curso ministrado pelo professor Joaquim](https://www.youtube.com/playlist?list=PLY-_XMpiC9C3Yn-T5Rg0f0te7X8aVUOO0).
 
 ## Encapsulamento
 As classes possuem como característica o controle de visibilidade, que pode ser:
