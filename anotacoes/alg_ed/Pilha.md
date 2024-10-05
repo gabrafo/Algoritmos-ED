@@ -24,7 +24,61 @@ Sua pilha de roupas estaria vazia e, portanto, não precisaria lavar mais nenhum
 ## Implementações comuns
 Geralmente, para implementar uma pilha, usam-se tais estratégias:
 - Implementação usando encadeamento de nós (elementos) da pilha.
-  Nesse caso, um nó (elemento) contém determinado valor e também o endereço de memória para o próximo nó (servindo como ponteiro). Isso ocorre até chegarmos ao fim da pilha, onde o último elemento não aponta para nenhum outro elemento.
   Para essa solução, geralmente, usa-se a estrutura de dados **lista encadeada** ou classes que atuem de forma semelhante.
   
 - Implementação usando arranjo (vetores) para armazenamento dos elementos.
+
+Pilha e nós são implementados tradicionalmente como estruturas ou classes. Utilizando C++, usaremos a segunda abordagem.
+
+### Implementação usando encadeamento
+A implementação mais comum de pilha é a usando encadeamento. 
+Nesse modelo de implementação, um nó (elemento) contém determinado valor e também o endereço de memória para o próximo nó (servindo como ponteiro). Isso ocorre até chegarmos ao fim da pilha, onde o último elemento não aponta para nenhum outro elemento (aponta para `NULL`). 
+Nesse sentido, podemos saber apenas onde é o topo (último elemento) da estrutura de dados, visto que para acessar outros, precisaríamos desempilhar todos os elementos anteriores ao desejado até o encontrarmos.
+
+#### Classe `Noh`
+Cada nó da pilha contem como atributos dados armazenados e um apontador para o nó seguinte.
+
+```cpp
+// Exemplo simples
+class Noh{
+	int dado;
+	Noh* proximoElemento; // Ponteiro para o próximo nó
+}
+```
+
+#### Classe `Pilha`
+A classe pilha contém, geralmente, um apontador para o último elemento adicionado à ED e um atributo para informar a quantidade de elementos (nós) que ela possui.
+
+```cpp
+class Pilha{
+	int tamanho;
+	Noh* ultimoElemento;
+}
+```
+
+#### Operações básicas sobre pilhas
+
+- Criação/destruição da pilha
+  O processo de criação da pilha se baseia em garantir que o topo da pilha não aponte para uma região válida de memória, ou seja, aponte para nulo.
+  
+  ![Imagem 97.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%2097.png)
+  
+  Representação da recém-criada `pilhaDeFrutas`, um objeto da classe `Pilha`.
+  Caso adicionemos um elemento a essa pilha recém-criada (veremos mais sobre a operação de inserção a seguir), teremos:
+  
+  ![Imagem 98.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%2098.png)
+  
+  A fruta "laranja" apontando, como próximo elemento da pilha, para o valor `NULL`, indicando que não há nenhum elemento abaixo dela. Isso se dará até o momento em que "laranja" for removida da pilha, onde só restará o valor `NULL`.
+
+- Inserção (*push*) de um elemento
+  Já a inserção em uma pilha consiste na criação de um novo nó com com o dado a ser armazenado, assim o colocamos no topo. Para que essa operação seja bem sucedida, o elemento que estava no topo (antes da operação de inserção) deverá ser indicado pelo elemento inserido como o próximo elemento da pilha. Além disso, caso haja alguma contabilização de tamanho da pilha, ela também deverá ser atualizada para abarcar o novo elemento.
+  
+  ![Imagem 100.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%20%20100.png)
+  
+  Com a adição da fruta "pera", o antigo elemento que estava no topo da estrutura de dados (a fruta "abacaxi") agora está sendo apontado por "pera" como o próximo elemento, a partir dela, da pilha.
+
+- Remoção (*pop*) de um elemento
+  Para a remoção, basta retirarmos o último elemento da pilha. Assim, caso hajam cinco elementos na pilha, como no exemplo acima, devemos apenas retirar o elemento que está no topo (representado pelo atributo `ultimoElemento` da classe `Pilha`), que, no nosso caso, seria "pera" e reatribuir com o elemento anterior ("abacaxi").
+  
+  ![Imagem 99.png](https://github.com/gabrafo/Algoritmos-ED/blob/master/anotacoes/alg_ed/anexo/Imagem%20%2099.png)
+  
