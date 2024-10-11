@@ -183,4 +183,4 @@ Após construirmos a pilha de chamadas, precisamos desempilhá-la até retornarm
 
 Ao chegarmos ao caso-base, fazemos o caminho reverso, realizando *pops* (retirada de chamadas da pilha) até retornarmos à chamada original da função, com a soma de todos os valores acrescidos.
 
-![Desempilhamento](https://github.com/gabrafo/Algoritmos-ED/blob/master/Implementa%C3%A7%C3%B5es%20de%20Algoritmos/Documenta%C3%A7%C3%A3o/Imagens/Imagem%210.png)
+![Desempilhamento](https://github.com/gabrafo/Algoritmos-ED/blob/master/Implementa%C3%A7%C3%B5es%20de%20Algoritmos/Documenta%C3%A7%C3%A3o/Imagens/Imagem%2010.png)
