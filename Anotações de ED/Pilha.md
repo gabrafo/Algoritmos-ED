@@ -1,3 +1,4 @@
+# Pilha
 Na computação, uma pilha é uma estrutura de dados que assume a forma de **monte** para acomodar informações, sendo baseada no princípio *Last In First Out* (LIFO), que prega que o último elemento a ser adicionado deverá ser o primeiro a ser excluído. **Não é possível o acesso aos demais dados senão a partir das extremidades**, assim, **caso eu deseje acessar um item no meio da pilha, devo desamontoar todos os elementos acima dele em ordem de prioridade até alcançá-lo**.
 
 ## Exemplo de pilha:
