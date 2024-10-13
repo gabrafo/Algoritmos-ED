@@ -1,0 +1,6 @@
+*text=lf
+
+*.md text eol=lf
+*.java text eol=lf
+*.cpp text eol=lf
+*.py text eol=lf
