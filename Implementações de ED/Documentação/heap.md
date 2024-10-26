@@ -86,7 +86,7 @@ A implementação prática do *max-heap* utiliza um vetor dinâmico e é definid
 
 O algoritmo de ordenação *Heap Sort* utiliza um *heap* para ordenar elementos em um vetor. Ele constrói um *heap* a partir dos dados e, em seguida, remove repetidamente o maior elemento, reorganizando o *heap* a cada retirada. Isso resulta em um vetor ordenado.
 
-### Complexidade de Tempo do *Heap* (`Big-O`)
+## Complexidade de Tempo do *Heap* (`Big-O`)
 
 A complexidade de tempo das operações de um *heap* está relacionada à profundidade máxima da árvore binária. Como um *heap* é uma **árvore binária completa**, sua profundidade máxima é de `log₂(n)`, onde `n` é o número de elementos. Assim:
 
