@@ -105,6 +105,7 @@ void MaxHeap::corrigeDescendo(int i){
 }
 
 void MaxHeap::corrigeSubindo(int i){
+    if (i==0) return;
     int p = pai(i);
     if(heap[i]>heap[p]){
         swap(heap[i], heap[p]);
