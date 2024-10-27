@@ -4,6 +4,8 @@
     alterado em 2023 by Renato
 */
 
+// Nota: Esse é um programa baseado em um exercício da disciplina de Estruturas de Dados da Universidade Federal de Lavras.
+
 /*
 Entrada/saída:
 
