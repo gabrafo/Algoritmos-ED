@@ -2,7 +2,7 @@
 // Permita as operações: adicionar, remover, espiar o primeiro item e limpar a fila. 
 // Ao remover de uma fila vazia, exiba "Erro: fila vazia!".
 // Cada tarefa tem: nome (string), recompensa (string), tipo (char) e duração (int).
-//
+
 // Comandos:
 // - i <nome> <recompensa> <tipo> <duração>: insere uma tarefa
 // - r: remove a tarefa da frente
@@ -10,7 +10,7 @@
 // - e: exibe a tarefa na frente
 // - a <tipo>: contabiliza o tempo total de tarefas desse tipo e as move para frente
 // - f: finaliza o programa
-//
+
 // Exemplo de I/O:
 // r
 // Erro: fila vazia!

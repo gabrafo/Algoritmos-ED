@@ -1,13 +1,52 @@
+// Torneio, mas a cada etapa, o elemento vencedor irá para a próxima etapa com o seu valor reduzido do valor do oponente.
+
+// Entrada:
+// - Número de participantes
+// - Valores de cada participante
+
+// Saída:
+// - Valor inicial do campeão
+
+// Exemplo de Entrada:
+// 8
+// 2 7 4 1 3 9 6 8
+// Exemplo de Saída:
+// 9
+
+// Exemplo de Entrada:
+// 13
+// 11 5 3 4 2 15 7 9 10 8 12 6 13
+// Exemplo de Saída:
+// 13
+
+// Nota: Esse é um programa baseado em um exercício da disciplina de Estruturas de Dados da Universidade Federal de Lavras.
+
 #include <iostream>
 #include <cstdlib> // Para usar a função swap()
 #include <cstring> // Para usar a função memcpy()
 
 using namespace std;
 
-typedef int Dado;
 const int INVALIDO = -1; // Considerando um torneio só de valores positivos
 
-// Nota: Implementação baseada nas videoaulas do Prof. Joaquim Quintero Uchôa.
+struct Dado {
+    int id;
+    int valAtual;
+};
+
+bool operator>(Dado d1, Dado d2) {
+    if(d1.valAtual == d2.valAtual){
+        return d1.id > d2.id;
+    }
+    return d1.valAtual > d2.valAtual;
+}
+
+bool operator<(Dado d1, Dado d2) {
+    if(d1.valAtual == d2.valAtual){
+        return d1.id < d2.id;
+    }
+    return d1.valAtual < d2.valAtual;
+}
 
 class Torneio{
     private:
@@ -29,8 +68,8 @@ class Torneio{
         Torneio(int numFolhas);
         Torneio(Dado vet[], int tam);
         ~Torneio();
-        void imprime();
         void insere(Dado d);
+        void exibeVencedor();
 };
 
 Torneio::Torneio(int numFolhas){
@@ -47,11 +86,9 @@ Torneio::Torneio(int numFolhas){
 
     inicioDados = capacidade - numFolhas;
 
-    cout << "inicioDados: " << inicioDados << endl;
-    cout << "capacidade: " << capacidade << endl;
-
     for(int i = 0; i<capacidade; i++){
-        heap[i] = INVALIDO;
+        heap[i].id = INVALIDO;
+        heap[i].valAtual = INVALIDO;
     }
 }
 
@@ -68,9 +105,6 @@ Torneio::Torneio(Dado vet[], int tam){
     heap = new Dado[capacidade];
     inicioDados = capacidade - tam;
 
-    cout << "inicioDados: " << inicioDados << endl;
-    cout << "capacidade: " << capacidade << endl;
-
     memcpy(&heap[inicioDados], vet, tam*sizeof(Dado));
 
     tamanho = tam;
@@ -82,7 +116,6 @@ Torneio::~Torneio(){
 }
 
 void Torneio::arruma(){
-    cout << "arruma: " << inicioDados-1 << endl;
     for(int i = inicioDados-1; i>=0; i--){
         copiaMaior(i);
     }
@@ -106,37 +139,38 @@ int Torneio::direito(int i){
 void Torneio::copiaMaior(int i){
     int esq = esquerdo(i);
     int dir = direito(i);
-    
-    cout << "copiaMaior" << endl;
-    cout << "i: " << i << ", e: " << esq << ", d:" << dir << endl;
 
+    int menor = INVALIDO;
     int maior = INVALIDO;
 
     if(esq < capacidade){
         if((dir<capacidade) and (heap[dir] > heap[esq])){
             maior = dir;
+            menor = esq;
         } else {
             maior = esq;
+            menor = dir;
         }
-        heap[i] = heap[maior];
+
+        // O valor atual do elemento vencedor é a subtração entre o valor atual do competidor maior e menor.
+        heap[i].valAtual = heap[maior].valAtual-heap[menor].valAtual;
+
+        // O valor do ID do vencedor é o mesmo do maior.
+        heap[i].id = heap[maior].id;
     } else {
-        heap[i] = INVALIDO;
+        heap[i].valAtual = INVALIDO;
     }
 }
 
+// !!!
+// OBS: Essa função, especificamente, talvez não se adeque ao exercício! Não a modifiquei, por não ser necessária para a resolução.
+// Portanto, atenção ao utilizar a construção do Heap por inserção.
 void Torneio::copiaSubindo(int i){
     int p = pai(i);
     if(heap[i]>heap[p]){
         heap[p] = heap[i];
         copiaSubindo(p);
     }
-}
-
-void Torneio::imprime(){
-    for(int i=0; i<capacidade; i++){
-        cout << heap[i] << " ";
-    }
-    cout << endl;
 }
 
 void Torneio::insere(Dado d){
@@ -150,38 +184,22 @@ void Torneio::insere(Dado d){
     tamanho++;
 }
 
+void Torneio::exibeVencedor(){
+    cout << heap[0].id << endl;
+}
+
 int main(){
-    int tam = 9;
-    Dado vet[] = {50,2,90,20,230,43,8,34,66};
+    unsigned int tam;
+    cin >> tam;
+    Dado vetor[tam];
 
-    Torneio *h = new Torneio(vet, tam);
-
-    cout << "IMPRIME!" << endl;
-    h->imprime();
-    delete h;
-
-    cout << endl;
-
-    tam = 13;
-    int vet2[] = {50,2,90,20,230,43,8,34,66,100,110,3,13};
-    h = new Torneio(vet2, tam);
-
-    cout << "IMPRIME!" << endl;
-    h->imprime();
-    delete h;
-
-    cout << endl;
-
-    tam = 9;
-    h = new Torneio(9);
-    for(int i = 0; i<tam; i++){
-        h->insere(vet[i]);
-        h->imprime();
+    for(unsigned int i = 0; i<tam; i++){
+        cin >> vetor[i].id;
+        vetor[i].valAtual = vetor[i].id;
     }
 
-    cout << "IMPRIME!" << endl;
-    h->imprime();
-    delete h;
+    Torneio torneio = Torneio(vetor, tam);
+    torneio.exibeVencedor();
 
     return 0;
 }
