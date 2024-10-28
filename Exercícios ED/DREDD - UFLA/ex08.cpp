@@ -16,6 +16,7 @@ O programa deve aceitar os seguintes comandos:
     r: para retirar um item do inventário
     l: para limpar (remover todos) os itens do inventário
     e: para espiar o topo do inventário (imprime os dados do topo sem removê-lo da pilha)
+    o: ordenar pilha alfabeticamente (com base no nome)
     x: para remover (e imprimir) todos os elementos com valor inferiores ao informado (deve ser seguido de um inteiro)
     f: para finalizar a execução do programa
 
