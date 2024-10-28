@@ -21,10 +21,9 @@ O programa deve aceitar os seguintes comandos:
     f: para finalizar a execução do programa
 
 Exemplo de Entrada e Saída juntas:
-r
-Erro: pilha vazia!
 i um a 1
 i dois b 2
+i dez j 10
 i quatro d 4
 i sete g 7
 i oito h 8
@@ -32,13 +31,13 @@ r
 Nome: oito Tipo: h Valor: 8
 e
 Nome: sete Tipo: g Valor: 7
-r
-Nome: sete Tipo: g Valor: 7
-x 2
-Nome: um Tipo: a Valor: 1
+o
 f
-Nome: quatro Tipo: d Valor: 4
+Nome: dez Tipo: j Valor: 10
 Nome: dois Tipo: b Valor: 2
+Nome: quatro Tipo: d Valor: 4
+Nome: sete Tipo: g Valor: 7
+Nome: um Tipo: a Valor: 1
 */
 
 class Dados{
