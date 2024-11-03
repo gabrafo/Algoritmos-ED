@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept> // Para tratamento de exceções
 using namespace std;
 
 typedef int Dado;
@@ -41,6 +42,7 @@ class Lista{
     void insereNoInicio(Dado dado);
     void insereNaPosicao(int posicao, Dado dado);
     int procura(Dado valor);
+    bool procura(Dado valor, int& posicao);
     void removeNoFim();
     void removeNoInicio();
     void removeValor(Dado dado);
@@ -166,8 +168,7 @@ void Lista::insereNaPosicao(int posicao, Dado dado){
         }
         tamanho++;
     } else {
-        cerr << "ERRO: Posição inexistente!" << endl;
-        exit(EXIT_FAILURE);
+        throw runtime_error("ERRO: Posição inexistente!");
     }
 }
 
@@ -185,6 +186,24 @@ int Lista::procura(Dado valor){
     }
 
     return posAux;
+}
+
+// Retornando a posição por passagem por referência!
+bool Lista::procura(Dado valor, int& posicao){
+    posicao = 0;
+    Noh* aux = primeiro;
+
+    while((aux!=NULL) and (aux->dado!=valor)){
+        aux = aux->proximo;
+        posicao++;
+    }
+
+    if(aux == NULL){
+        posicao = -1;
+        return false;
+    } else {
+        return true;
+    }
 }
 
 void Lista::removeNoFim(){
@@ -295,6 +314,7 @@ int main(){
     minhaLista.insere(1);
     minhaLista.insere(0);
     minhaLista.insere(6);
+    minhaLista.insere(41);
 
     cout << "IMPRESSÃO!" << endl;
     minhaLista.imprime();
@@ -306,15 +326,50 @@ int main(){
     cout << "Inserindo vinte e cinco na posição 'três' (quarta posição)..." << endl;
     minhaLista.insereNaPosicao(3,25);
 
+    cout << "Inserindo um na posição 'vinte e nove' (trigésima posição)... Gerará ERRO!" << endl;
+
+    // Tratamento de exceção
+    try{
+        minhaLista.insereNaPosicao(29,1);
+    } catch (const exception& e) {
+        cout << e.what() << endl;
+    }
+
     cout << "IMPRESSÃO!" << endl;
     minhaLista.imprime();
     cout << endl;
 
-    cout << "BUSCA! Caso não haja uma posição com o valor buscado, retornaremos -1." << endl;
-    cout << "Procurando a posição com valor zero: " << minhaLista.procura(0) << endl;
-    cout << "Procurando a posição com valor cinquenta: " << minhaLista.procura(50) << endl;
-    cout << "Procurando a posição com valor doze: " << minhaLista.procura(12) << endl;
-    cout << endl;
+    cout << "BUSCA!" << endl;
+    int pos = minhaLista.procura(0);
+    cout << "Procurando a posição com valor zero: ";
+    if(pos == -1){
+        cout << "Elemento não encontrado!" << endl;;
+    } else {
+        cout << pos << endl;
+    }
+    cout << "Procurando a posição com valor cinquenta: ";
+    pos = minhaLista.procura(50);
+    if(pos == -1){
+        cout << "Elemento não encontrado!" << endl;;
+    } else {
+        cout << pos << endl;
+    }
+
+    // Outra forma de fazer o tratamento de erros será usada naimpressão das duas próximas buscas!
+    cout << "Procurando a posição com valor doze: ";
+    if (minhaLista.procura(12, pos)){
+        cout << pos << endl;
+    } else {
+        cout << "Elemento não encontrado!" << endl;
+    }
+
+    cout << "Procurando a posição com valor quarenta e um: ";
+        if (minhaLista.procura(41, pos)){
+            cout << pos << endl;
+        } else {
+            cout << "Elemento não encontrado!" << endl;
+        }
+        cout << endl;
 
     cout << "Sobrecarga do construtor de cópia..." << endl;
     Lista outraLista(minhaLista);
@@ -351,6 +406,11 @@ int main(){
     cout << endl;
 
     cout << "Remoção TOTAL!" << endl;
+    maisUmaLista.removeNoFim();
+    cout << "IMPRESSÃO!" << endl;
+    maisUmaLista.imprime();
+    cout << endl;
+
     maisUmaLista.removeNoFim();
     cout << "IMPRESSÃO!" << endl;
     maisUmaLista.imprime();
@@ -405,7 +465,11 @@ int main(){
     minhaLista.removeValor(25);
     minhaLista.imprime();
     cout << endl;
+
+    cout << "Remoção do valor quarenta e um..." << endl;
+    minhaLista.removeValor(41);
+    minhaLista.imprime();
     cout << "Nada impresso na impressão e impressão reversa nas duas linhas anteriores! Lista vazia!" << endl;
-    cout << endl;
+
     return 0;
 }
