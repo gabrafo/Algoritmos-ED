@@ -1,5 +1,14 @@
-// RESOLUÇÃO AINDA EM ANDAMENTO! AGUARDE ATUALIZAÇÕES.
-// Ainda adicionarei o propósito do programa, além de finalizar a implementação do código. No primeiro comentário abaixo estão os nomes dos idealizadores desse exercício.
+// Implementação de uma tabela hash com tratamento de colisões por encadeamento.
+// O programa permite realizar as seguintes operações sobre a tabela hash:
+// - Inserir um item na tabela, tratando colisões pela inserção no início da lista encadeada.
+// - Remover item na tabela, exibindo mensagem de erro se o item não existir.
+// - Localizar item na tabela, exibindo informações sobre o item ou uma mensagem de erro caso o item não seja encontrado.
+// - Imprimir todo o conteúdo da tabela hash, mostrando a posição e os itens presentes.
+// A tabela hash é inicializada com um tamanho especificado pelo usuário.
+// Os itens têm três atributos: nome (string), tipo (caracter) e valor (inteiro).
+
+// Nota: Esse é um programa baseado em um exercício da disciplina de Estruturas de Dados da Universidade Federal de Lavras. O crédito do código-base está
+// no comentário abaixo!
 
 /* 
  * Classe hash, uma tabela hash em que chaves e valores são strings
@@ -8,11 +17,12 @@
  * Atualizado por Renato, 2023
  * 
  */
+
 #include <iostream>
 
 using namespace std;
 
-const int UMPRIMO = 13;
+const int UMPRIMO = 7;
 
 int funcaoHash(string s, int M) {
     long h = 0;
@@ -89,16 +99,12 @@ bool tabelaHash::insere(string c, char t, int v) {
     novo->tipo = t;
     novo->valor = v;
 
-    if(elementos[hash] == NULL){
-        elementos[hash] = novo;
-        return true;
+    if(elementos[hash] != NULL){
+        novo->proximo = elementos[hash];
     }
 
-    noh* atual = elementos[hash];
-    while(atual->proximo!=NULL){
-        atual = atual->proximo;
-    }
-    atual->proximo = novo;
+    elementos[hash] = novo;
+    cout << "chave '" << c << "' inserida na posicao " << hash << endl;
     return true;
 }
 
@@ -117,7 +123,6 @@ bool tabelaHash::recupera(string c, char& t, int& v) {
     }
 
     return false;
- 
 }
 
 // retira um valor associado a uma chave
@@ -150,14 +155,14 @@ bool tabelaHash::remove(string c) {
 void tabelaHash::imprime( ) {
     noh* atual;
     for (int i = 0; i < capacidade; i++) {
-        cout << i << ":";
+        cout << i << ": ";
         atual = elementos[i];
         while (atual != NULL) {
             cout << "[" << atual->chave << "/"
                  << atual->valor << "]";
             atual = atual->proximo;
-            
         }
+        cout << endl;
     }
     
 }
@@ -177,17 +182,17 @@ int main() {
                 case 'i': // inserir
                     cin >> chave >> tipo>> valor;
                     if (not tabela.insere(chave, tipo, valor))
-                        cout << "Erro na inserção: chave já existente!" << endl;
+                        cout << "Erro na inserção!" << endl;
                     break;
                 case 'r': // remover
                     cin >> chave;
                     if (not tabela.remove(chave))
-                        cout << "Erro na remoção: chave não encontrada!" << endl;
+                        cout << "Elemento inexistente!" << endl;
                     break;
                 case 'l': // buscar
                     cin >> chave;
                     if (not tabela.recupera(chave,tipo,valor))
-                        cout << "Erro na busca: chave não encontrada!" << endl;
+                        cout << "Elemento inexistente!" << endl;
                     else
                         cout << "Tipo: " << tipo << " Valor: " << valor << endl;
                     break;
