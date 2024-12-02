@@ -238,7 +238,7 @@ void Lista::imprime(){
     Noh*aux = primeiro;
 
     while(aux!=NULL){
-        cout << "(" << aux->dado.nomeEquipe << ", " << aux->dado.lider << ", " << aux->dado.linguagem << ", " << aux->dado.qtdMembros << endl;
+        cout << "(" << aux->dado.nomeEquipe << ", " << aux->dado.lider << ", " << aux->dado.linguagem << ", " << aux->dado.qtdMembros << ")" << endl;
         aux = aux->proximo;
     }
 }
@@ -249,7 +249,6 @@ bool Lista::estaVazia(){
     }
     return false;
 }
-
 
 int main() {
     Lista minhaLista;
