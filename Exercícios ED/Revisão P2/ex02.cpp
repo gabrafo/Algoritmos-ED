@@ -1,5 +1,5 @@
 // Nota: Esse é um programa baseado em um exercício da disciplina de Estruturas de Dados da Universidade Federal de Lavras. Está sendo utilizado
-// apenas para a minha revisão para a primeira prova do semestre, e parte de sua implementação não foi feita por mim, e sim por quem organizou
+// apenas para a minha revisão para a segunda prova do semestre, e parte de sua implementação não foi feita por mim, e sim por quem organizou
 // esse exercício, que não é de minha autoria.
 
 #include <iostream>
