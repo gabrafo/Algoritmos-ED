@@ -11,7 +11,7 @@ O objetivo principal deste repositório é:
 
 Embora tenha sido inicialmente criado com base nas atividades e exercícios da disciplina de **Estruturas de Dados** da Universidade Federal de Lavras (UFLA), este repositório **não está restrito à disciplina** e poderá continuar sendo atualizado com novos conteúdos, mesmo após o término do meu período enquanto aluno da disciplina.
 
-**OBS**: Alguns exemplos de código nas seções de implementação de algoritmos e estruturas de dados são baseados no livro *Entendendo Algoritmos*, mas há também muitos exemplos que eu mesmo desenvolvi.
+**OBS**: Alguns exemplos de código nas seções de implementação de algoritmos e estruturas de dados são baseados no livro *Entendendo Algoritmos*, mas há também muitos exemplos que eu mesmo desenvolvi. Alem disso, pode ser que algumas das anotações não estejam 100% completas, não tratando todos os métodos das estruturas de dados.
 
 ## Conteúdo
 
