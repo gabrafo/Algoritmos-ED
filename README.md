@@ -38,14 +38,21 @@ Embora tenha sido inicialmente criado com base nas atividades e exercícios da d
 
 ### 2. Recursos e Links Adicionais
 
+- **[Revisão: Listas, vetores e tabelas Hash](https://youtu.be/Bu5hNuOmtNk?si=XfeEnRW0u5kkY1pU)**: Videoaula gravada por mim sobre listas, vetores e tabelas Hash.
+
 - **[Curso CS50 da Harvard University](https://www.youtube.com/watch?v=3LPJfIKxwWc&list=PLhQjrBD2T381WAHyx1pq-sBfykqMBI7V4):** Curso gratuito de introdução à ciência da computação.
 
 - **[Estruturas de Dados (com C++)](https://www.youtube.com/playlist?list=PLY-_XMpiC9C3Yn-T5Rg0f0te7X8aVUOO0):** Playlist disponibilizada pela Universidade Federal de Lavras (UFLA), destinada à disciplina de Estruturas de Dados, com aulas ministradas pelo professor Joaquim Quintero Uchôa.
 
 - **Exercícios e Projetos de Revisão:**
-  - [Exercícios de Revisão 1](https://github.com/gabrafo/Revisao): Exercícios de revisão para as provas da disciplina de **Introdução aos Algoritmos**, que prenuncia a disciplina de ED na UFLA. Esses exercícios incluem implementações de diversos algoritmos e algumas estruturas de dados.
-  - [Exercícios de Revisão 2](https://github.com/gabrafo/Revisao1): Mais exercícios de revisão para a mesma disciplina.
-  - [Projeto Prático com Shell Sort](https://github.com/gabrafo/ProjetoPraticoIAlg): Projeto prático da disciplina de **Introdução aos Algoritmos**, onde foi utilizado o Shell Sort para ordenação eficiente. Este projeto também contém implementações de vários algoritmos.
+
+  1. Algoritmos
+    - [Exercícios de Revisão 1](https://github.com/gabrafo/Revisao): Exercícios de revisão para as provas da disciplina de **Introdução aos Algoritmos**, que prenuncia a disciplina de ED na UFLA. Esses exercícios incluem implementações de diversos algoritmos e algumas estruturas de dados.
+    - [Exercícios de Revisão 2](https://github.com/gabrafo/Revisao1): Mais exercícios de revisão para a mesma disciplina.
+    - [Projeto Prático com Shell Sort](https://github.com/gabrafo/ProjetoPraticoIAlg): Projeto prático da disciplina de **Introdução aos Algoritmos**, onde foi utilizado o Shell Sort para ordenação eficiente. Este projeto também contém implementações de vários algoritmos.
+
+  2. Estruturas de dados
+    - [Projeto Prático implementando um Sequence Set](https://github.com/gabrafo/ED-Projeto): Projeto prático da disciplina de **Estruturas de Dados**, na qual busquei implementar um Sequence Set, acessando um CSV e o fragmentando em diversos arquivos binários. Também utilizei busca binária para auxiliar na inserção e busca de registros.
 
 ### 3. Aviso Legal
 
