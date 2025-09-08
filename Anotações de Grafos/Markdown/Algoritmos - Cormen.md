@@ -44,7 +44,4 @@ Podemos escolher entre dois modos padrões para representar um grafo G = (V, E):
 
 Geralmente, **nosso método preferido são as listas de adjacência**. Elas **se destacam em situações em que estamos lidando com grafos esparsos**. No entanto, **para grafos densos**, a **matriz de adjacência pode ser preferível**, ou quando **precisamos saber rapidamente se há uma aresta conectando dois vértices** dados. 
 
-![[./Imagens/22-1.png]]
-[Figuras do livro Algoritmos - Teoria e Prática de Cormen.](<Markdown/Grafos, listas e matrizes de adjacência.md>)
-
-
+![Figura 22-1 do livro.](https://github.com/gabrafo/Algoritmos-ED/blob/master/Anota%C3%A7%C3%B5es%20de%20Grafos/Markdown/Imagens/22-1.png)
