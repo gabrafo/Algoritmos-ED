@@ -9,15 +9,15 @@ O objetivo principal deste repositório é:
 - Documentar o meu progresso e descobertas durante o estudo.
 - Compartilhar anotações, implementações e recursos que possam ser úteis para outros que estão aprendendo ou revisando esses conceitos.
 
-Embora tenha sido inicialmente criado com base nas atividades e exercícios da disciplina de **Estruturas de Dados** da Universidade Federal de Lavras (UFLA), este repositório **não está restrito à disciplina** e poderá continuar sendo atualizado com novos conteúdos, mesmo após o término do meu período enquanto aluno da disciplina.
+Embora tenha sido inicialmente criado com base nas atividades e exercícios da disciplina de **Estruturas de Dados** da Universidade Federal de Lavras (UFLA), este repositório **não está restrito à disciplina** e poderá continuar sendo atualizado com novos conteúdos correlacionados a estruturas de dados, algoritmos, ou grafos, mesmo após o término do meu período enquanto aluno da disciplina ou da Universidade Federal de Lavras.
 
-**OBS**: Alguns exemplos de código nas seções de implementação de algoritmos e estruturas de dados são baseados no livro *Entendendo Algoritmos*, mas há também muitos exemplos que eu mesmo desenvolvi. Além disso, pode ser que algumas das anotações não estejam 100% completas, não tratando todos os métodos das estruturas de dados.
+**OBS**: Alguns exemplos de código nas seções de implementação de algoritmos e estruturas de dados são baseados no livro *Entendendo Algoritmos*, mas há também muitos exemplos que eu mesmo desenvolvi. Além disso, pode ser que algumas das anotações ou não estejam 100% completas, não tratando todos os métodos das estruturas de dados.
 
 ## Conteúdo
 
 ### 1. Anotações, Implementação e Documentação
 
-- **Anotações em Markdown (MD) e em PDF:** Incluem anotações extensas do material da disciplina de **Estruturas de Dados** (ED) da Universidade Federal de Lavras (UFLA), além de outros materiais de estudo (como o curso CS50 da Universidade de Harvard). Essas anotações estão sendo atualizadas conforme o avanço na compreensão dos temas, sendo que muitas delas contém representações visuais propostas por mim, como no arquivo `Pilha.md`.
+- **Anotações em Markdown (MD) e em PDF:** Incluem anotações extensas do material da disciplina de **Estruturas de Dados** (ED) e **Grafos e suas aplicações** da Universidade Federal de Lavras (UFLA), além de outros materiais de estudo (como o curso CS50 da Universidade de Harvard). Essas anotações estão sendo atualizadas conforme o avanço na compreensão dos temas, sendo que muitas delas contém representações visuais propostas por mim, como no arquivo `Pilha.md`.
   
 - **Implementação e Documentação de Algoritmos:** Explicações detalhadas dos algoritmos explorados no repositório, alguns advindos de *Entendendo Algoritmos* e outros desenvolvidos por mim. Alguns exemplos incluem:
   - **Selection Sort**
@@ -44,6 +44,10 @@ Embora tenha sido inicialmente criado com base nas atividades e exercícios da d
 
 - **[Estruturas de Dados (com C++)](https://www.youtube.com/playlist?list=PLY-_XMpiC9C3Yn-T5Rg0f0te7X8aVUOO0):** Playlist disponibilizada pela Universidade Federal de Lavras (UFLA), destinada à disciplina de Estruturas de Dados, com aulas ministradas pelo professor Joaquim Quintero Uchôa.
 
+- **[Livro Projeto de Algoritmos com Implementações em Pascal e C](https://www2.dcc.ufmg.br/livros/algoritmos/capitulos.php):** Livro disponibilizado gratuitamente pela Universidade Federal de Minas Gerais que, além de tratar de algoritmos e estruturas de dados, também trata de grafos.
+
+Outro livro que está me auxiliando bastante é o livro Grafos de Marco Goldbarg e Elizabeth Goldbarg, bem como o livro Algoritmos: Teoria e Prática de Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest e Clifford Stein.
+
 - **Exercícios e Projetos de Revisão:**
 
   1. Algoritmos
@@ -56,7 +60,7 @@ Embora tenha sido inicialmente criado com base nas atividades e exercícios da d
 
 ### 3. Aviso Legal
 
-As das soluções disponibilizadas neste repositório são exclusivamente para fins acadêmicos, sendo que parte delas foi corrigida pelo juiz online da universidade como parte do processo de aprendizagem na disciplina de Estruturas de Dados.
+As soluções disponibilizadas neste repositório são exclusivamente para fins acadêmicos, sendo que parte delas foi corrigida pelo juiz online da universidade como parte do processo de aprendizagem na disciplina de Estruturas de Dados.
 
 Este repositório tem como objetivo **estudar, revisar e compartilhar conhecimento** sobre algoritmos e estruturas de dados. **Não se destina a substituir ou "copiar" conteúdo oficial da universidade**. Todos os exercícios aqui desenvolvidos foram implementados com o propósito de aprendizado individual.
 
@@ -64,7 +68,7 @@ Este repositório tem como objetivo **estudar, revisar e compartilhar conhecimen
 
 ### 4. Agradecimentos
 
-Gostaria de expressar meus sinceros agradecimentos aos professores da UFLA, especialmente aos professores **Joaquim Quintero Uchôa**, **Juliana Greghi**, **Renato Ramos da Silva** e a todos os outros educadores que fizeram parte da construção pedagógica das aulas de **Estruturas de Dados** e forneceram os conteúdos práticos e teóricos que serviram como base para o aprendizado documentado neste repositório.
+Gostaria de expressar meus sinceros agradecimentos aos professores da UFLA, especialmente aos professores **Joaquim Quintero Uchôa**, **Juliana Greghi**, **Renato Ramos da Silva**, **Mayron Moreira** e a todos os outros educadores que fizeram parte da construção pedagógica das aulas de **Introdução aos Algoritmos**, **Estruturas de Dados** e **Grafos e suas aplicações** e forneceram os conteúdos práticos e teóricos que serviram como base para o aprendizado documentado neste repositório.
 
 ### 5. Contribuições
 
