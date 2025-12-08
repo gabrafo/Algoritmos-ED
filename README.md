@@ -87,3 +87,102 @@ Para contribuir, por favor, siga estas etapas:
 ## Contato
 
 Para qualquer dúvida ou sugestão, sinta-se à vontade para abrir uma issue ou entrar em contato diretamente.
+
+---
+
+# Repository for Studying Algorithms and Data Structures
+
+Welcome to this repository dedicated to the study and review of algorithms and data structures! This is a personal project intended to deepen my understanding of the field while providing useful resources and documentation for the community.
+
+## Objective
+
+The main goals of this repository are to:
+
+* Revisit and strengthen my knowledge of algorithms and data structures.
+* Document my progress and insights throughout the learning process.
+* Share notes, implementations, and resources that may be helpful for others who are learning or reviewing these concepts.
+
+Although it was initially created based on assignments and exercises from the **Data Structures** course at the Federal University of Lavras (UFLA), this repository is **not limited to that course** and may continue to be updated with additional content related to data structures, algorithms, or graphs—even after I am no longer enrolled in the course or at UFLA.
+
+**Note:** Some code examples in the algorithm and data structure implementation sections are based on the book *Grokking Algorithms*, while many others were developed by me. Additionally, some notes may not be fully complete or may not cover every method of the studied data structures.
+
+## Contents
+
+### 1. Notes, Implementations, and Documentation
+
+* **Markdown (MD) and PDF Notes:** Include extensive notes from the **Data Structures** (ED) and **Graphs and Their Applications** courses at UFLA, as well as other study materials (such as the CS50 course from Harvard University). These notes are being updated as I deepen my understanding of the topics, and many include visual representations I created—such as in the file `Pilha.md`.
+
+* **Algorithm Implementations and Documentation:** Detailed explanations of the algorithms explored in this repository. Some come from *Grokking Algorithms*, while others are my own implementations. Examples include:
+
+  * **Selection Sort**
+  * **Quick Sort**
+  * **Binary Search**
+  * **Sequential Search**
+
+* **Data Structure Implementations and Documentation:** Detailed explanations of data structures based on my experience and course material from UFLA’s Data Structures class. Topics include:
+
+  * **Arrays**
+  * **Linked Lists**
+  * **Graphs**
+  * **AVL Trees**
+  * **Hash Tables**
+
+* **LeetCode Exercises:** In addition to the course exercises, this repository also includes solutions to **LeetCode** problems—a platform well-known for challenging programming questions. These exercises are a great way to practice and apply algorithms and data structure concepts in a practical, industry-relevant context.
+
+* **Data Structures Course Exercises:** The exercises folder contains assignments from the Data Structures course, with many solutions automatically evaluated through UFLA’s online judge.
+
+### 2. Additional Resources and Links
+
+* **[Review: Lists, Arrays, and Hash Tables](https://youtu.be/Bu5hNuOmtNk?si=XfeEnRW0u5kkY1pU):** A video lecture recorded by me covering lists, arrays, and hash tables.
+
+* **[CS50 Course – Harvard University](https://www.youtube.com/watch?v=3LPJfIKxwWc&list=PLhQjrBD2T381WAHyx1pq-sBfykqMBI7V4):** A free introductory computer science course.
+
+* **[Data Structures (C++)](https://www.youtube.com/playlist?list=PLY-_XMpiC9C3Yn-T5Rg0f0te7X8aVUOO0):** A playlist offered by the Federal University of Lavras (UFLA) for the Data Structures course, taught by professor Joaquim Quintero Uchôa.
+
+* **[Book: Algorithm Design with Implementations in Pascal and C](https://www2.dcc.ufmg.br/livros/algoritmos/capitulos.php):** A free book published by the Federal University of Minas Gerais, covering algorithms, data structures, and graph theory.
+
+Other helpful books include *Graph Theory* by Marco Goldbarg and Elizabeth Goldbarg, as well as *Introduction to Algorithms* by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein.
+
+* **Exercises and Review Projects:**
+
+  1. **Algorithms**
+
+     * [Review Exercises 1](https://github.com/gabrafo/Revisao): Revision exercises for the **Introduction to Algorithms** course, which precedes Data Structures at UFLA. These include implementations of several algorithms and some data structures.
+     * [Review Exercises 2](https://github.com/gabrafo/Revisao1): Additional revision exercises for the same course.
+     * [Practical Project with Shell Sort](https://github.com/gabrafo/ProjetoPraticoIAlg): A practical project for the **Introduction to Algorithms** course using Shell Sort for efficient sorting. This project includes several algorithm implementations.
+
+  2. **Data Structures**
+
+     * [Practical Project implementing a Sequence Set](https://github.com/gabrafo/ED-Projeto): Practical project for the **Data Structures** course, where I implemented a Sequence Set that reads from a CSV file and splits the data into multiple binary files. Binary search was used to assist with insertion and record lookup.
+
+### 3. Legal Notice
+
+All solutions provided in this repository are for academic purposes only, and many were evaluated by the university’s online judge as part of the learning process for the Data Structures course.
+
+This repository aims to **study, review, and share knowledge** about algorithms and data structures. It is **not intended to replace or duplicate official university material**. All exercises here were developed for personal learning.
+
+Students are strongly encouraged to attempt the exercises on their own before consulting these solutions to ensure an effective learning experience.
+
+### 4. Acknowledgments
+
+I would like to express my sincere gratitude to the professors at UFLA—especially **Joaquim Quintero Uchôa**, **Juliana Greghi**, **Renato Ramos da Silva**, **Mayron Moreira**—and all other educators who contributed to the teaching of **Introduction to Algorithms**, **Data Structures**, and **Graphs and Their Applications**, providing the practical and theoretical foundation that shaped the learning documented in this repository.
+
+### 5. Contributions
+
+Contributions are welcome! If you would like to contribute, you may:
+
+* **Add new implementations:** Share your own algorithm implementations in different programming languages.
+* **Improve documentation:** Suggest improvements for the existing notes and documentation.
+* **Share resources:** Add links and references to helpful study materials.
+
+To contribute, please follow these steps:
+
+1. Fork this repository.
+2. Create a branch for your contribution (`git checkout -b my-contribution`).
+3. Make your changes and commit them (`git commit -am 'Add new contribution'`).
+4. Push to the branch (`git push origin my-contribution`).
+5. Open a pull request describing your changes and enhancements.
+
+## Contact
+
+If you have any questions or suggestions, feel free to open an issue or reach out directly.
