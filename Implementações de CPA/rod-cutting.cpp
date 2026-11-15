@@ -26,6 +26,17 @@ int rod_cut_dynamic_programming(int n, int p[]){
     return r[n]; // lucro máx
 }
 
+void rod_cut_dynamic_programming_path(int n, int p[], result res[]){ // res é param de saida, vai ficar nele os dados
+    res[0].r = 0;
+    for(int j = 1; j<n+1; j++){
+        res[j].r = numeric_limits<int>::min(); // representando infinito, menor valor de int possivel
+        for (int i = 1; i<=j; i++){
+            res[j].r = max(res[j].r, p[i] + res[j-i].r);
+            res[j].s = i;
+        }
+    }
+}
+
 int main(){
     int n;
 
@@ -34,8 +45,19 @@ int main(){
         for (int i = 1; i <= n; i++) {
             cin >> element[i];
         }
-        int bestProfit = rod_cut_dynamic_programming(n, element);
-        cout << bestProfit << endl;
+        // int bestProfit = rod_cut_dynamic_programming(n, element);
+        // cout << bestProfit << endl;
+        result res[n+1];
+        rod_cut_dynamic_programming_path(n, element, res);
+        cout << "results" << endl;
+        for (int i = 1; i <= n; i++) {
+            cout << res[i].r << " ";
+        }
+        cout << endl;
+        cout << "best cut position" << endl;
+        for (int i = 1; i <= n; i++) {
+            cout << res[i].s << " ";
+        }
     }
 
     return 0;
